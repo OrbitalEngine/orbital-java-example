@@ -5,7 +5,7 @@ import dev.yeff.orbital.ecs.GameObject;
 import dev.yeff.orbital.ecs.builders.GameObjectBuilder;
 import dev.yeff.orbital.example.components.ColorChanger;
 import dev.yeff.orbital.example.components.PlayerMovement;
-import dev.yeff.orbital.graphics.Colors;
+import dev.yeff.orbital.graphics.Color;
 import dev.yeff.orbital.graphics.Shapes;
 import dev.yeff.orbital.math.Vector2f;
 import dev.yeff.orbital.scenes.Scene;
@@ -20,7 +20,7 @@ public class MainScene extends Scene {
         
         player = new GameObjectBuilder(this, "Player")
                 .withTransform(game.getScreenCenter(), new Vector2f(20.0f, 20.0f))
-                .withShape(Shapes.CIRCLE, Colors.RED)
+                .withShape(Shapes.CIRCLE, Color.RED)
                 .withComponents(new PlayerMovement(), new ColorChanger())
                 .build();
 

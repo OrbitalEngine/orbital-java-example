@@ -16,7 +16,9 @@ public class Main {
         Game game = new Game(
                 new Vector2f(700, 700),
                 "Hello World",
-                scenes
+                scenes,
+                false,
+                60.0f
         );
 
         game.start("Main");
